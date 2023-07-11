@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0; 
+}
+body {
+  background-color: #f7f7f7;
+}
+.page {
+  position: relative;
+  top: 50px;
+}
+main {
+  margin-top: 30px;
+}
+.topnav {
+  background-color: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    overflow:visible;
+    width: 100%;
+}
+.topnav-header{
+  display: flex;
+  align-items: center;
+}
+ #name{
+  font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 26px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+#name:hover {
+  cursor: pointer;
+  color: #CE84AD;
+} 
+.topnav .icon {
+  display: none;
+}
+.web-links{
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  margin-top: 27px;
+  padding: 5px;
+  list-style: none;
+}
+
+.web-links:hover {
+  cursor: pointer;
+  color: #CE84AD;
+}
+
+.dropdown {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  top: 100%;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 24px;  
+  border: none;
+  outline: none;
+  padding-top: 27px;
+  padding-right: 25px;
+  display: none;
+  cursor: pointer;
+  background-color: inherit;
+  transition: 0.3s ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  padding: 0;
+  text-align: left;
+  top:90px;
+  left: 0;
+  z-index: 1;
+  background-color: #f7f7f7;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.dropdown-links {
+  float: none;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  padding: 8px 4px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  margin: 2px;
+}
+.dropdown-links.active{
+  background-color: #CE84AD;
+}
+
+.dropdown:hover .dropbtn {
+  color: pink;
+}
+
+.dropdown-content:hover > a {
+  background-color: #f7f7f7;
+  color: black;
+  display: flex;
+  opacity: 1;
+}
+
+.dropdown:focus-within .dropdown-content {
+  display: flex;
+}
+.dropdown-content:focus-within {
+  display:none !important;
+}
+
+
+
+   /* css grid for coded name*/
+   .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .grid-item {
+    flex-basis: calc(50% - 10px);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 75%;
+  }
+  
+  .grid-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .grid-item:nth-child(2) img {
+    top: 35%;
+  }
+  
+  /* About Me section styles */
+  .about-me {
+    background-color: #f7f7f7;
+    /* height: calc(100vh - 72px); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: -8px;
+  }
+  .about-me h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Esteban', serif, monospace;
+  }
+  .about-me p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
+  .learn-more{
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: #e7bc38 ;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 25px;
+    font-family: 'Esteban',serif;
+  }
+
+  /* NAV */
+  @media screen and (max-width: 600px) {
+
+    .web-links:not(#name):not(.icon):not(.dropdown){
+      display: none;
+    }
+    .dropdown {
+      display: flex;
+      text-align: center;
+      position:static;
+    }
+    .dropdown .dropbtn {
+      display: flex;
+      max-width: 100%;
+      text-align: left;
+    }
+  
+  }
+  
+  /* ABOUT LANDING PAGE */
+  @media screen and (min-width: 900px) {
+    .about-me h1{
+     font-size: 4rem;
+    }
+  } 
+  /* add a footer of all your social media links and include it in your contact page too, have a cute artsy memjoi */
+  
+  
+
+
+  
